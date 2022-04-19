@@ -1,11 +1,11 @@
 package com.example.scheduler.medicalscheduler.repository;
 
-import com.example.scheduler.medicalscheduler.model.Loginmodel;
+import com.example.scheduler.medicalscheduler.model.Doctormodel;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LoginRepository extends JpaRepository<Loginmodel,String> {
+public interface DoctorRepository extends JpaRepository<Doctormodel,String> {
     
 }

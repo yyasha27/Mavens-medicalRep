@@ -1,5 +1,7 @@
 package com.example.scheduler.medicalscheduler.service;
 
+import java.util.List;
+
 import com.example.scheduler.medicalscheduler.model.Loginmodel;
 import com.example.scheduler.medicalscheduler.repository.LoginRepository;
 
@@ -14,6 +16,10 @@ public class LoginserviceImpl implements Loginservice {
     @Override
     public Loginmodel entrydetails(Loginmodel details){
         return loginRepository.save(details);
+    }
+    @Override
+    public List<Loginmodel> getuserdetails() {
+        return loginRepository.findAll();
     }
     
 }
