@@ -23,16 +23,6 @@ public class UserDoctorMapModel {
     @JoinColumn(name="doctor_id",referencedColumnName = "serial_number",nullable=false)
     private Doctormodel doctor;
 
-    public UserDoctorMapModel() {
-    }
-    
-    public int getId() {
-        return Id;
-    }
-    public void setId(int id) {
-        Id = id;
-    }
-
     public Loginmodel getUser() {
         return user;
     }

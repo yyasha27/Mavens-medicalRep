@@ -8,12 +8,8 @@ import com.example.scheduler.medicalscheduler.model.UserDoctorMapModel;
 import com.example.scheduler.medicalscheduler.service.UserDoctorMapService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 
 @RestController
@@ -24,12 +20,14 @@ public class UserDoctorMapController {
     @Autowired
     private UserDoctorMapService userdoctorservice;
 
+    //entry 
     @PostMapping("/mapdoctors")
     public String userdoctormapping (@RequestBody UserDoctorMapModel details){
         userdoctorservice.userdoctormapping(details);
         return "Mapped Successfully";
     }
     
+    //display
     @GetMapping("/getmappingdetails")
     public List<UserDoctorMapModel> getmappingdetails(){
         return userdoctorservice.getmappingdetails();
