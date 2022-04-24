@@ -8,41 +8,27 @@ public class Loginmodel {
     @Id
     @Column (nullable = false,unique = true)
     public String serial_number;
-    @Column(nullable = false,unique = true)
+    @Column(unique = true)
     private String email;
-    @Column(nullable = false,unique = true)
+    @Column(unique = true)
     private String username;
     @Column(nullable = false)
     private String firstname;
     @Column(nullable = false)
     private String lastname;
-    @Column(nullable = false)
     private String higher_institutename;
-    @Column(nullable = false)
     private String higher_percentage;
-    @Column(nullable = false)
     private String college_name;
-    @Column(nullable = false)
     private String college_percentage;
-    @Column(nullable = false)
     private String phonenumber;
-    @Column(nullable = false)
     private String area;
-    @Column(nullable = false)
     private String state;
-    @Column(nullable = false)
     private String city ;
-    @Column(nullable = false)
     private String languageknown;
-    @Column(nullable = false)
     private String pincode;
-    @Column(nullable = false)
     private String door_number;
-    @Column(nullable = false)
     private String street;
-    @Column(nullable = false)
     private String date_of_birth;
-    @Column(nullable = false)
     private String Password;
 
     public Loginmodel(){

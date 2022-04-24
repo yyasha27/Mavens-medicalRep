@@ -11,27 +11,19 @@ import javax.persistence.Table;
 @Table(name="doctordetails")
 public class Doctormodel {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    //private int Id;
     @Column(nullable= false, unique = true)
     private String serial_number;
     @Column(nullable= false)
     private String doctorname;
     @Column(nullable= false)
     private String speciality;
-    @Column(nullable= false)
     private String workspace;
-    @Column(nullable= false)
     private String area;
-    @Column(nullable= false)
     private String city;
-    @Column(nullable= false)
     private String state;
-    @Column(nullable= false)
     private String pincode;
     @Column(nullable= false)
     private String status;
-    @Column(nullable= false)
     private String street_name;
 
     public Doctormodel() {

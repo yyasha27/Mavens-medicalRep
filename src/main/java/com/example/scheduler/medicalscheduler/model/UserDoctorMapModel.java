@@ -16,11 +16,11 @@ public class UserDoctorMapModel {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name="user_id",referencedColumnName = "serial_number",nullable=false)
+    @JoinColumn(name="user_id",referencedColumnName = "serial_number")
     private Loginmodel user;
     
     @ManyToOne
-    @JoinColumn(name="doctor_id",referencedColumnName = "serial_number",nullable=false)
+    @JoinColumn(name="doctor_id",referencedColumnName = "serial_number")
     private Doctormodel doctor;
 
     public Loginmodel getUser() {

@@ -19,7 +19,7 @@ public class EventSchedulermodel {
     private String doctor_id;
     @Column(nullable = false)
     private String speciality;
-    @Column(nullable = false)
+    @Column(nullable = false,unique=true)
     private String eventdate;
     @Column(nullable = false)
     private String status;
