@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EventSchedulerRepository extends JpaRepository<EventSchedulermodel,String>{
 
-    public List<EventSchedulermodel> findByEventDate(String eventdate);
+    public List<EventSchedulermodel> findByEventdate(String eventdate);
     
 }

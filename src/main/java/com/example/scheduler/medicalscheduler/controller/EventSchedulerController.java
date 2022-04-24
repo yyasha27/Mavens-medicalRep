@@ -4,11 +4,14 @@ import java.util.List;
 
 import com.example.scheduler.medicalscheduler.model.EventSchedulermodel;
 import com.example.scheduler.medicalscheduler.repository.EventSchedulerRepository;
+import com.example.scheduler.medicalscheduler.service.EventSchedulerservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +26,22 @@ public class EventSchedulerController {
     @Autowired
     EventSchedulerRepository repo;
 
+    @Autowired
+    private EventSchedulerservice eventservice;
+
+    @PostMapping("/eventdetails")
+    public String schedule(@RequestBody EventSchedulermodel details){
+        eventservice.schedule(details);
+        return "Scheduled";
+    }
+
+    @GetMapping("/geteventdetails")
+    public List<EventSchedulermodel> getscheduledetails(){
+        return eventservice.getscheduledetails();
+    }
+
     @GetMapping("/name")
     public ResponseEntity<List<EventSchedulermodel>> geteventbydate(@RequestParam String eventdate ){
-        return new ResponseEntity<List<EventSchedulermodel>>(repo.findByEventDate(eventdate),HttpStatus.OK);
+        return new ResponseEntity<List<EventSchedulermodel>>(repo.findByEventdate(eventdate),HttpStatus.OK);
     }
 }

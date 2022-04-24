@@ -37,4 +37,8 @@ public class UserDoctorMapModel {
     public void setDoctor(Doctormodel doctor) {
         this.doctor = doctor;
     }
+    
+    public void save(UserDoctorMapModel userdoctormap){
+
+    }
 }
