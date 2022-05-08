@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentMap;
 
 @RestController
 @RequestMapping("/login")
+@CrossOrigin
 public class Logincontroller {
     
     ConcurrentMap<String, Loginmodel> loginmodels =new ConcurrentHashMap<>();

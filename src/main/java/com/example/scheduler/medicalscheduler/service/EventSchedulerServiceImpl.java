@@ -24,6 +24,12 @@ public class EventSchedulerServiceImpl implements EventSchedulerservice{
     public List<EventSchedulermodel> getscheduledetails() {
         return repo.findAll();
     }
+    
+    //@Override
+    //public EventSchedulermodel updateevent(String eventdate, EventSchedulermodel details){
+     //   return repo.save(details);
+    //}
+    
 
     
     

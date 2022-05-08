@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/map")
+@CrossOrigin
 public class UserDoctorMapController {
 
     ConcurrentMap<String, UserDoctorMapModel > userdoctormapmodelsMap =new ConcurrentHashMap<>();

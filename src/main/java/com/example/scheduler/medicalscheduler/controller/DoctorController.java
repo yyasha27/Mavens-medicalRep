@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
 @RequestMapping("/doctor")
+@CrossOrigin
 public class DoctorController {
     ConcurrentMap<String, Doctormodel> doctormodels =new ConcurrentHashMap<>();
 
@@ -35,7 +36,6 @@ public class DoctorController {
     public Doctormodel updateDoctormodel(@PathVariable String serialNumber, @RequestBody Doctormodel doctormodel) {
         return doctorservice.updateDoctormodel(serialNumber,doctormodel);
     }
-    
-    
+
 
 }
