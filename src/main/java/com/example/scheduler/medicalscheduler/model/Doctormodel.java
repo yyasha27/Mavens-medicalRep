@@ -13,16 +13,13 @@ public class Doctormodel {
     @Id
     @Column(nullable= false, unique = true)
     private String serial_number;
-    @Column(nullable= false)
     private String doctorname;
-    @Column(nullable= false)
     private String speciality;
     private String workspace;
     private String area;
     private String city;
     private String state;
     private String pincode;
-    @Column(nullable= false)
     private String status;
     private String street_name;
 

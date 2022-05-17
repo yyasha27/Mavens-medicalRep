@@ -7,14 +7,12 @@ import javax.persistence.*;
 public class Loginmodel {
     @Id
     @Column (nullable = false,unique = true)
-    public String serial_number;
+    public String serialnumber;
     @Column(unique = true)
     private String email;
     @Column(unique = true)
     private String username;
-    @Column(nullable = false)
     private String firstname;
-    @Column(nullable = false)
     private String lastname;
     private String higher_institutename;
     private String higher_percentage;
@@ -158,11 +156,11 @@ public class Loginmodel {
     public void setDate_of_birth(String date_of_birth) {
         this.date_of_birth = date_of_birth;
     }
-    public String getSerial_number() {
-        return serial_number;
+    public String getSerialnumber() {
+        return serialnumber;
     }
-    public void setSerial_number(String serial_number) {
-        this.serial_number = serial_number;
+    public void setSerialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
     }
 
 }

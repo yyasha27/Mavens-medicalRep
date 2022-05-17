@@ -16,7 +16,7 @@ public class UserDoctorMapModel {
     private int Id;
 
     @ManyToOne
-    @JoinColumn(name="user_id",referencedColumnName = "serial_number")
+    @JoinColumn(name="user_id",referencedColumnName = "serialnumber")
     private Loginmodel user;
     
     @ManyToOne
